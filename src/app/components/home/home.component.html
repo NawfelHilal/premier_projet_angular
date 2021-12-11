@@ -1,0 +1,1 @@
+<app-list-item [cardData]="cardData" [button]="buttonAdd" *ngFor="let cardData of data" (likeEvent)="onLikeClick($event)" (buttonEvent)="onAddClick($event)" (listComponentClick)="onListComponentClick($event)"></app-list-item>

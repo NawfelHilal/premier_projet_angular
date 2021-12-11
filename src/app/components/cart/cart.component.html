@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Code produit</th>
+            <th>Description</th>
+            <th>Prix unitaire</th>
+            <th>Quantité</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of cart.cartItems">
+            <td>{{ item.productId}}</td>
+            <td>{{ item.description}}</td>
+            <td>{{ item.unitPrice}}</td>
+            <td>{{ item.quantity}}</td>
+            <td>{{ item.unitPrice * item.quantity}}</td>
+        </tr>
+    </tbody>
+    <h1>Prix Total : {{ cart.total}}</h1>
+    <button class="btn btn-primary" routerLink="/livraison">Valider Panier</button>
+
+</table>
